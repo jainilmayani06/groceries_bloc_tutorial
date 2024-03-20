@@ -24,7 +24,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   FutureOr<void> homeInitialEvent(
       HomeInitialEvent event, Emitter<HomeState> emit) async {
     emit(HomeLoadingState());
-    await Future.delayed(Duration(seconds: 2));
+    await Future.delayed(Duration(seconds: 1));
     emit(HomeLoadedSuccessState(
         products: GroceryData.groceryProducts
             .map((e) => ProductDataModel(
@@ -36,6 +36,8 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
             .toList()));
   }
 
+
+  //when click on wishlist from productTile
   FutureOr<void> homeProductWishlistButtonClickedEvent(
       HomeProductWishlistButtonClickedEvent event, Emitter<HomeState> emit) {
     print('Wishlist Product Clicked');
@@ -43,6 +45,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(HomeProductItemWishListedActionState());
   }
 
+  //when click on cart from productTile
   FutureOr<void> homeProductCartButtonClickedEvent(
       HomeProductCartButtonClickedEvent event, Emitter<HomeState> emit) {
     print('Cart Product clicked');
@@ -50,12 +53,14 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     emit(HomeProductItemCartedActionState());
   }
 
+  //when click on wishlist button in appbar
   FutureOr<void> homeWishlistButtonNavigateEvent(
       HomeWishlistButtonNavigateEvent event, Emitter<HomeState> emit) {
     print('Wishlist Navigate clicked');
     emit(HomeNavigateToWishlistPageActionState());
   }
 
+  //when click on cart button in appbar
   FutureOr<void> homeCartButtonNavigateEvent(
       HomeCartButtonNavigateEvent event, Emitter<HomeState> emit) {
     print('Cart Navigate clicked');

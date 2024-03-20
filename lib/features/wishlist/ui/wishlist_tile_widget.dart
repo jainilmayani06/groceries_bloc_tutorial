@@ -55,7 +55,7 @@ class WishListTileWidget extends StatelessWidget {
                         wishlistBloc.add(WishListRemoveFromWishListEvent(
                             productDataModel: productDataModel));
                       },
-                      icon: Icon(Icons.favorite_sharp)),
+                      icon: Icon(Icons.favorite_sharp,color: Colors.red,)),
                 ],
               )
             ],

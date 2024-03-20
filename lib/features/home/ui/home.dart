@@ -55,7 +55,7 @@ class _HomeState extends State<Home> {
               appBar: AppBar(
                 automaticallyImplyLeading: false,
                 backgroundColor: Colors.teal,
-                title: Text('Bloc Groceries App',style: TextStyle(color: Colors.white),),
+                title: Text('Groceries App',style: TextStyle(color: Colors.white),),
                 actions: [
                   IconButton(
                       onPressed: () {
