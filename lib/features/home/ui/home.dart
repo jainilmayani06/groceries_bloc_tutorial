@@ -53,6 +53,7 @@ class _HomeState extends State<Home> {
             final successState = state as HomeLoadedSuccessState;
             return Scaffold(
               appBar: AppBar(
+                automaticallyImplyLeading: false,
                 backgroundColor: Colors.teal,
                 title: Text('Bloc Groceries App',style: TextStyle(color: Colors.white),),
                 actions: [
