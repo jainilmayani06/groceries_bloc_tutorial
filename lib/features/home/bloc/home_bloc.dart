@@ -1,14 +1,11 @@
 import 'dart:async';
-
 import 'package:bloc/bloc.dart';
 import 'package:flutter_bloc_tutorial/data/cart_items.dart';
 import 'package:flutter_bloc_tutorial/data/grocery_data.dart';
 import 'package:flutter_bloc_tutorial/data/wishlist_items.dart';
 import 'package:flutter_bloc_tutorial/features/home/models/home_product_data_model.dart';
 import 'package:meta/meta.dart';
-
 part 'home_event.dart';
-
 part 'home_state.dart';
 
 class HomeBloc extends Bloc<HomeEvent, HomeState> {

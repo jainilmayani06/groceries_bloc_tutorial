@@ -44,11 +44,13 @@ class _HomeState extends State<Home> {
       },
       builder: (context, state) {
         switch (state.runtimeType) {
+
           case HomeLoadingState:
             return Scaffold(
                 body: Center(
               child: CircularProgressIndicator(),
             ));
+
           case HomeLoadedSuccessState:
             final successState = state as HomeLoadedSuccessState;
             return Scaffold(
